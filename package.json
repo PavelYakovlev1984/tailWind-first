@@ -1,7 +1,6 @@
 {
-  "name": "tailWind-first",
+  "name": "tailwind-first",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "watch": "npx tailwindcss -i ./input.css -o ./css/main.css --watch",
@@ -20,5 +19,7 @@
   "homepage": "https://github.com/PavelYakovlev1984/tailWind-first#readme",
   "devDependencies": {
     "tailwindcss": "^3.2.7"
-  }
+  },
+  "dependencies": {},
+  "description": ""
 }
