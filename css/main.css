@@ -526,6 +526,11 @@ body {
   max-width: 1080px;
 }
 
+.btn {
+  @layer py-[10px] px-8 bg-lightred inline-block rounded-full shadow-customred text-white text-xl traking-tight
+  
+}
+
 .absolute {
   position: absolute;
 }
@@ -542,8 +547,41 @@ body {
   top: 6rem;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-\[10px\] {
+  margin-bottom: 10px;
+}
+
+.mb-\[18px\] {
+  margin-bottom: 18px;
+}
+
+.mb-\[2px\] {
+  margin-bottom: 2px;
+}
+
 .block {
   display: block;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .flex {
@@ -554,12 +592,36 @@ body {
   display: none;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-\[450px\] {
+  width: 450px;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
+}
+
+.max-w-\[386px\] {
+  max-width: 386px;
+}
+
+.max-w-xl {
+  max-width: 36rem;
+}
+
 .flex-col {
   flex-direction: column;
 }
 
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -570,9 +632,36 @@ body {
   gap: 3rem;
 }
 
+.gap-7 {
+  gap: 1.75rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.border-\[2px\] {
+  border-width: 2px;
+}
+
+.border-lightred {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 13 56 / var(--tw-border-opacity));
+}
+
 .bg-lightred {
   --tw-bg-opacity: 1;
   background-color: rgb(255 13 56 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .py-4 {
@@ -580,8 +669,35 @@ body {
   padding-bottom: 1rem;
 }
 
+.py-\[10px\] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.pt-\[100px\] {
+  padding-top: 100px;
+}
+
 .pt-\[26px\] {
   padding-top: 26px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-\[50px\] {
+  font-size: 50px;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-xl {
@@ -589,13 +705,39 @@ body {
   line-height: 1.75rem;
 }
 
+.font-black {
+  font-weight: 900;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
 .font-medium {
   font-weight: 500;
+}
+
+.leading-snug {
+  line-height: 1.375;
+}
+
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
+
+.text-darkred {
+  --tw-text-opacity: 1;
+  color: rgb(215 0 38 / var(--tw-text-opacity));
 }
 
 .text-lightblack {
   --tw-text-opacity: 1;
   color: rgb(77 66 68 / var(--tw-text-opacity));
+}
+
+.text-lightred {
+  --tw-text-opacity: 1;
+  color: rgb(255 13 56 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -643,8 +785,13 @@ body {
   transform: translate(0, -50%);
 }
 
-.menu.active>.top-line {
+.burger.active>.top-line {
   transform: translateY(8px) rotate(45deg);
+  transition: .3s all ease;
+}
+
+.burger.active>.bottom-line {
+  transform: translateY(-8px) rotate(135deg);
   transition: .3s all ease;
 }
 
@@ -659,6 +806,15 @@ body {
 }
 
 @media (max-width: 992px) {
+  .lg\:pt-16 {
+    padding-top: 4rem;
+  }
+
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
   .lg\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -666,11 +822,73 @@ body {
 }
 
 @media (max-width: 768px) {
+  .md\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
   .md\:block {
     display: block;
   }
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:max-w-full {
+    max-width: 100%;
+  }
+
+  .md\:pt-12 {
+    padding-top: 3rem;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sm\:mb-2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .sm\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
+  .sm\:mt-4 {
+    margin-top: 1rem;
+  }
+
+  .sm\:flex-col {
+    flex-direction: column;
+  }
+
+  .sm\:gap-0 {
+    gap: 0px;
+  }
+
+  .sm\:pt-10 {
+    padding-top: 2.5rem;
+  }
+
+  .sm\:text-center {
+    text-align: center;
+  }
+
+  .sm\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .sm\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
