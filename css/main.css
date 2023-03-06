@@ -526,11 +526,6 @@ body {
   max-width: 1080px;
 }
 
-.btn {
-  @layer py-[10px] px-8 bg-lightred inline-block rounded-full shadow-customred text-white text-xl traking-tight
-  
-}
-
 .absolute {
   position: absolute;
 }
